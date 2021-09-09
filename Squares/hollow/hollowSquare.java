@@ -1,5 +1,3 @@
-// Java program to print olid square pattern
-
 class hollowSquare {
 	public static void main (String[] args) {
         int numRows = 7;
