@@ -1,2 +1,0 @@
-For Making Github URL shorter
-https://git.io/
