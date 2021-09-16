@@ -1,0 +1,22 @@
+/* =======================================================================/
+*  --------------------    Solid Triangle Pattern    --------------------*
+** ======================================================================*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numRows = 7; 
+    int rowVal;     
+    int colVal;     
+    char patternSymbol = '*'; 
+
+    for(rowVal = numRows; rowVal >= 1; rowVal--) { // from 7 => 1
+        for (colVal = 1; colVal <= rowVal; colVal++) {
+            cout<<patternSymbol<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
