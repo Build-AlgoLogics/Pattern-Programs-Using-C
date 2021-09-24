@@ -11,7 +11,7 @@ int main() {
     int colVal;     
     char patternSymbol = '*';   
 
-    for(rowVal = 1; rowVal <= numRows; rowVal++) {
+    for(rowVal = numRows; rowVal >= 1; rowVal--) {
         for(colVal = 1 ;colVal <= numRows - rowVal; colVal++) {
             cout<<"  ";
         } 

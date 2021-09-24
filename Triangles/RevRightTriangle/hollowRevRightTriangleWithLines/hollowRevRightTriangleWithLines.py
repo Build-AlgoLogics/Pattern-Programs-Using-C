@@ -1,7 +1,7 @@
 numRows = 7
 patternSymbol = '*'
 
-for rowVal in range(1, numRows + 1):
+for rowVal in range(numRows, 0, -1): #It will exclude 0 (Zero)
     for colVal in range(1, (numRows - rowVal) + 1):
         print("  ", end="")
     for colVal in range(1, rowVal + 1):
