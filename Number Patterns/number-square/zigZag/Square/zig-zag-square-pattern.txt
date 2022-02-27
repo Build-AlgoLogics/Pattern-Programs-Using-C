@@ -1,0 +1,161 @@
+Hello Everyone, welcome to build algologics. so in this video, we are gonna learn how can we write our code to print these zig-zag Square patterns.
+So, without any further due, lets get started.
+here. I am asuming that you are already familier with how to print normal square pattern using stars or numbers.  
+let me first briefly introduce you what is square pattern. 
+
+so for printing square pattern, we have to use these two for loops. this is the convention that I am using for making understanding of the program simple. 
+like numRows for number of rows, 
+rowVal for each value of row and colVal for each value of columns. 
+
+if you don't know the basics of this pattern, you can watch my first video of square pattern using stars. I'll give you the link in the description of this video.
+So, lets begin with this first pattern.
+
+alright. so although this pattern is seems printed in this way, but as we know, our code will print these values from left to right only, 
+means from this left end to the right end. 
+and if we reach here, it will again start from here and so on. and why it would be starting from here?? 
+because we are using this new line character, which is used for seperating each line.
+
+alright, so lets analyze this problem first. at the very begining, 
+the firts line printed the values from 1 to 5 and this	 5 is nothing but our numRows as we are declaring here. but the main thing is, this value is incrementing by 1 each time.
+now lets see, what this second line is doing. here, we are starting with some arbitrary value, we'll see it soon what it is, 
+but here, the main point is, this value is decrementing by one each time. 
+
+this behaviour is same for all the values of rows. 
+it means, for odd number of row values, like these one, we have to increament the value of numberToPrint variable by 1, we are gonna use this variable to print each value.
+as the starting value of this pattern is 1, we will initilizing this variable by 1. and similarly, for this even row, while printing numbers , we have to decrement this value by 1 each time. 
+so, its implies that, we have to work differntly with each number of odd and even rows. 
+so, our condition will be like this, here, we are using this modulo operator to get remainder, and as we know, this statement will always return 1 or 0. 
+because we are using this 2 as our devider, and what mod operator will do, It will return the remainder. and return value will always be zero or 1. 
+here, if return value is 1, it means we are dealing with an odd row and if it is 0, we are dealing with an even row. 
+
+so, according to this condition, we can separate our this logic of incrementing or decrementing. Now, lets see, what is the starting value of each line, 
+so, for the first line, we are starting from 1. and this second line is starting from 10, similarly this 3rd line is starting from 11 and so on. 
+so lets see, what is the relation between these starting and ending values. So, here, this first line is ending after printing 5 and the second line starts with 10. 
+means, the differnt between these value is nothing but the 5. 
+
+similarly, second row ends with 6 and 3rd row starts with 11, here also, the difference is 5. because 6 plus 5 is eleven. 
+lets also see this end value and starting value of this 4th row. here also, we are getting the same different. it means that, 
+for starting value of any row, excluding this first row, we have to add this 5 into the previous value whichever we are getting, 
+and this value 5, we can get from this numRows variable. lets write our code for this problem first. here, this variable is used for printing each values.
+then here, according to this condition, 
+we'll increment this value by 1 because this block will execute for each odd value of rowVal and similarly decrement this value by 1 if the row is even. 
+we also need to print this value, so lets write one printf funtion to print this value. 
+
+now, as we know, every time we have to add this numRows in this numToPrint variable. so, before going to next row, means after printing all this 5 numbers,
+we have to update this value in this way. 
+alright.
+it seems like we are done. 
+
+but wait.. let me first run this code, and yeah, this output is not the one that we are expecting to have. and why so??
+because, here as we are increamenting or decrementing this value by one for each of these iteration, 
+and we also know that, this loop will only get terminate when the value of colVal is one greater then this condition variable. 
+for example, everytime for terminating this loop. colVal must be greater or equals to 6 that is one more then this numRows value which in this case is 5. 
+and because of this only, 
+values of this numToprint variable get affected, so, for making them consistent.
+ 
+we also have to add or subtract 1 from this value before adding 5 into it. 
+and this adding or subtracting will depend on whether we are comming here from printing odd row or even row. because if it is an odd row, we have to subtract 1 from this value. 
+as this increment statement will increase this value by 1. similarly, if the row is even, we have to subtract one from this numToPrint variable.
+ 
+we can achieve this by using if-else block in this way. now lets run it, and yeah, we got our expected result. 
+let me also add some formating to make it looks good. this is just for formatting number values, its good to use number formatter for printing this value instead of spaces.
+let me again run this code to see the difference, here it is, in this way we can formate our number output. 
+ 
+but now, although this is fine, but I want to make some changes in this part to make it looks clean. 
+here, as we only have one statement inside these both if and else blocks, so, instead of using this if-else block, 
+I'll use the conditional operator to do this job. 
+
+in this way, here, when this condtion returns true, we are subtracting one from this value and when this condtion return false, we'll add this 1 into it.
+now again run it. and yeah, we got the same output. 
+
+alright, so we have successfully write our code to print zigzag square pattern using numbers. 
+
+
+so now, lets see, how can we print alphabets in this manner. 
+but before going to make changes in this code to print alphabets, let me first briefly tell you how these characters are stored inside the machine.
+these all characers are represented by some numbers like small 'a' is represented by 97, similarly small 'b' is represented by 98 and so on. 
+in similar manner capital 'A' is represented by 65, and capital 'B' is represented with the number 66 and so on. these numbers are actually called as their ascii values.
+means ascii value of small  'a' is 97 and ascii value of capital 'A' is 65, similar for small 'b', it is 98 and for capital 'B', ascii value is 66 and so on. 
+I am not gonna confused you more with these ascci values. 
+but if you wnat to learn or are intrested to know more about ascci values of different symbols including these alphabets. 
+you can just google it and you'll be able to find some best examples with their explainations.
+here I'll show you some basic examples that we are gonna used to print zigZag pattern with alphabets.
+now, lets see some examples to better understand the conversion of these characters. In c programming, conversion between these symbols and ascii is very straight forward.
+you just need to specify the type of the variable. lets declare one character type variable with default value as 'A'. now, as we know, for printing this capital 'A',
+we have to use this %c formate specifier inside printf function. this %c formate specifier is used for printing single character. lets run it to see the output.
+here, capital 'A' is printed as we expected. 
+now, if we want to print its ascii value, we just need to store this character in int type variable in this way, 
+this statement internally assign ascii value of 'A' to this (assciValue) variable. because at the end, ascii values are nothing but some integer values. 
+means conversion would be happened internally. 
+we don't have to use any extra function to perform this action. like in python, for getting ascii value or sometime called as unicode of any character, 
+we have to use ord() function and also for getting character by using ascci value, we have to use chr() function provided by the python module. 
+
+now lets print it by using this %d formate specifier. here it is, as you can see, ascii value of capital 'A' is 65. similarly you can find ascii value of any symbole.
+not only this, c languge also allows us to perform any arithmatic operation on these characters. and why so??, because these characters are nothing but some integer values.
+and we already know, we can perform any arithmetic operations on these integer values. let me show you one example of this. lets see, what will happened if we add 1 into this 'A'.
+now again run this code, and yeah, We got this B printed and also ascii value of B which is nothing but 66. 
+
+Now, as we got some ideas of alphabet representations.
+lets make some changes in this code to print alphabets instead of these numbers. 
+So for printing these alphabets, we just need to change this variable as char data type and assign it intial value as capital 'A'. you can also use small 'a' if you wish to.
+thats it, now lets run this code. this is the output that we are expecting. here, instead of printing numbers from  1 to 25, now we are printing these characters from A to Y.
+but, this is not the general solution. what does it menas???
+lets see.
+lets assign this numRows with the value 6. 
+now again run this code, and yeah, we got this strange output because here we are exceeding the limits of assci value of characters. means, after printing this 'Z'.
+the next chracter according ascci value table is this one and so on. 
+But, as we want to print only alphabets, means after printing this Z character, we'll again print A, then B, and then C and so on. so whats the solution??
+lets understand this first. as we are having only 26 characters whether they are from small a to z or capital A to Z. 
+
+just see this below table, here. you can see that, for priting A, we are adding 0 to its assci value, and similarly for printing B, we are adding this 1 into asscii value of A,
+and as the result, we are getting the asscii value of B, similarly to get the assci value of C, we are adding this 2 into the ascii value of A and so on. 
+it means that, we can limit this number to always be between 0 to 25, and add them to character A to get repective character. 
+so for this purpose, now we'll use one charToPrint variable as counter, whose value will always get increamented. 
+so before going ahead, lets make some changes in this code as we discussed earlier.
+lets run this code again, this output is same as before. but now, we can limit this charToPrint counter value to always return numbers between 0 to 25 using % modulo operator.
+modulo operator in c programming is used for getting remainder after performing division operation. 
+so now, before adding this value into alphabet A, we'll use this statement, this allows us to have values only from 0 to 25. lets firts run this code, and yeah. 
+this is our final solution. lets see, why this solution is actually working.
+see this below table, here, when we divide 0 with 26, the remainder will be 0. similarly, when we divide 1 with 26, the remainder will be the same value as 1,
+because these all are the values which are smaller then this 26, and hence not divisible. 
+but, when this charToPrint value becomes 26, this time the remainder will be 0. and why so?? because this time, 26 is completely divisble by 26. 
+that is why we are getting this remainder as 0. and because of this only, we are getting this A printed again. 
+similarly, when charToPrint becomes 27, we'll have remainder as 1, and adding 1 to this value means printing B and so on and so forth.
+
+hope you got the idea, if you haven't understood any of the part, please rewatch that part again. 
+you will definitely get the answers of all your questions. 
+but still if you have any difficulties to understand any of the concept, please do let me know through comment section, I'll try my best to clear it out. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

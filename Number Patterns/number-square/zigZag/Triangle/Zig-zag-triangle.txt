@@ -1,0 +1,6 @@
+Hello Everyone, Welcome to build AlgoLogics, So today in this tutorial, we'll see how to write code for printing these two zigzag triangle patterns.
+So, lets get started. 
+before continueing with this video, if you haven't seen the video on zigzag Square pattern, 
+I would highly recommend you to please watch that tutorial first and then continue with this one. 
+alright, so for printing this pattern, we can reuse this triangle pattern code. here, instead of printing this star symbol, we'll print numbers in this format.
+so, lets talk about how these numbers are actually printed. 
