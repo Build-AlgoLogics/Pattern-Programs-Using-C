@@ -5,7 +5,7 @@ You can use below table for Easy access
 
 | Program title  | Video Explanation | Code | 
 | -------------- | ----------------- | --------- |
-| Square pattern using stars | [Link](https://youtu.be/gisY-IZZ2ts)  | [Link](https://github.com/Build-AlgoLogics/Pattern-Programs-Using-C-CPP-Java-Python/tree/master/Star%20Patterns/Squares)
+| Square pattern using stars | [Explaination Video](https://youtu.be/gisY-IZZ2ts)  | [Code](https://github.com/Build-AlgoLogics/Pattern-Programs-Using-C-CPP-Java-Python/tree/master/Star%20Patterns/Squares)
 
 
 
