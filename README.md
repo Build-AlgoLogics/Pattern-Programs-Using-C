@@ -1,9 +1,11 @@
 # Pattern-Programs-Using-C-CPP-Java-Python
-This Repository Includes Source codes for all the patterns in (c, c++, java and python) programming languages
+This Repository Includes Source codes for all the patterns in (c, c++, java and python) programming languages.
+You can use below table for Easy access
 
-| Program title  | Video Explanation | Code In C | Code In C++ | Code In Java | Code In Java | 
-| -------------- | ----------------- | --------- | ----------- | ------------ | ------------ |
-| Square pattern using stars | Two  | three | four  | Five | six |
+
+| Program title  | Video Explanation | Code | 
+| -------------- | ----------------- | --------- |
+| Square pattern using stars | [Link](https://youtu.be/gisY-IZZ2ts)  | [Link](https://github.com/Build-AlgoLogics/Pattern-Programs-Using-C-CPP-Java-Python/tree/master/Star%20Patterns/Squares)
 
 
 
