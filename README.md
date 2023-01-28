@@ -2,7 +2,7 @@
 This Repository Includes Source codes for all the patterns in (c, c++, java and python) programming languages
 
 | Program title  | Video Explanation | Code In C | Code In C++ | Code In Java | Code In Java | 
-| ------------- | ------------- |
+| -------------- | ----------------- | --------- | ----------- | ------------ | ------------ |
 | One | Two  | three | four  | Five | six |
 
 
